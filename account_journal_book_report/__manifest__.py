@@ -9,6 +9,7 @@
     'depends': [
         "account_reports",
         "report_xlsx",
+        "account_analytic_required"
     ],
     'data': [
         'wizard/account_journal_book_report_views.xml',

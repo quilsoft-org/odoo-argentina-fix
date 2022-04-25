@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="account_analityc_tag_only_read" model="ir.rule">
+            <field name="name">Etiquetas  usuario group_account_invoice </field>
+            <field name="model_id" ref="account.model_account_analytic_tag"/>
+                    <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+
+        </record>
+
+        <record id="account_analityc_only_read" model="ir.rule">
+            <field name="name">Cuentas analiticas solo leible para usuario group_account_invoice </field>
+            <field name="model_id" ref="account.model_account_analytic_account"/>
+                    <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('account.group_account_user'))]"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+        </record>
+
+
+    </data>
+</odoo>
